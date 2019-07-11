@@ -26,9 +26,12 @@ namespace Loops
         #endregion
 
         #region for Samples
-        public static void forSample1()
+        public static void ForSample1()
         {
+
             /* for loop execution */
+
+
             for (int a = 10; a < 20; a = a + 1)
             {
                 Console.WriteLine("value of a: {0}", a);
@@ -41,7 +44,7 @@ namespace Loops
         public static void DowhileSample1()
         {
             /* local variable definition */
-            int a = 10;
+            int a = 1000000;
 
             /* do loop execution */
             do
@@ -50,6 +53,8 @@ namespace Loops
                 a = a + 1;
             }
             while (a < 20);
+
+
             Console.ReadLine();
         }
         #endregion
@@ -81,7 +86,7 @@ namespace Loops
             {
                 Console.WriteLine("value of a: {0}", a);
                 a++;
-
+                
                 if (a > 15)
                 {
                     /* terminate the loop using break statement */
@@ -114,11 +119,28 @@ namespace Loops
         #endregion
         public static void LoopSamples()
         {
-            ContinueStatmet();
+            ForSample1();
         }
         public static void Main(string[] args)
         {
-            LoopSamples();
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i % 2 == 0)
+                    continue;
+                Console.WriteLine($"{i}");
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (i == j)
+                        continue;
+                    Console.WriteLine($"{i},{j}");
+                }
+            }
+
         }
     }
 }

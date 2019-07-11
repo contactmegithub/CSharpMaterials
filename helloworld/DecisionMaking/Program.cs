@@ -65,7 +65,7 @@ namespace DecisionMaking
         public static void switchStatment()
         {
             /* local variable definition */
-            char grade = 'B';
+            char grade = 'F';
 
             switch (grade)
             {
@@ -88,6 +88,26 @@ namespace DecisionMaking
             }
             Console.WriteLine("Your grade is  {0}", grade);
             Console.ReadLine();
+        }
+        public static string switchStatment(char grade)
+        {
+            /* local variable definition */
+
+            switch (grade)
+            {
+                case 'A':
+                    return "Excellent!";
+                case 'B':
+                case 'C':
+                    return "Well done";
+                case 'D':
+                    return "You passed";
+                case 'F':
+                    return  "Better try again";
+                default:
+                    return "Invalid grade";
+            }
+        
         }
         public static void nestedSwitch()
         {
@@ -112,11 +132,41 @@ namespace DecisionMaking
             Console.ReadLine();
         }
 
-
-
+        public enum Gender
+        {
+            Male,
+            Female,
+            Trans,
+            Others
+        }
+        public static void PrintWelcomeText(string FirstName, string LastName, Gender gender)
+        {
+            switch(gender)
+            {
+                case Gender.Female:
+                    Console.WriteLine("Welcome Mis." + FirstName + " " + LastName);
+                    break;
+                case Gender.Male:
+                    Console.WriteLine("Welcome Mr." + FirstName + " " + LastName);
+                    break;
+                case Gender.Trans:
+                    Console.WriteLine("Welcome Mis." + FirstName + " " + LastName);
+                    break;
+                case Gender.Others:
+                    Console.WriteLine("Welcome " + FirstName + " " + LastName);
+                    break;
+                default:
+                    Console.WriteLine("Invalid gender");
+                    break;
+            }
+        }
         public static void Main(string[] args)
         {
-            nestedSwitch();
+            PrintWelcomeText("Abinaya", "Ganesan", Gender.Female);
+            PrintWelcomeText("Mohammed", "Yasin", Gender.Male);
+            PrintWelcomeText("Pavithra", "Selvaraj", Gender.Trans);
+            PrintWelcomeText("Unknown", "Sample", Gender.Others);
+            PrintWelcomeText("", "", (Gender)10);
         }
     }
 }

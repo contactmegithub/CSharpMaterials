@@ -30,6 +30,12 @@ namespace OperatorsAppl
 
             c = a--;
             Console.WriteLine("Line 7 - Value of c is {0}", c);
+
+            c = ++a;
+            Console.WriteLine("Line 6 - Value of c is {0}", c);
+
+            c = --a;
+            Console.WriteLine("Line 7 - Value of c is {0}", c);
             Console.ReadLine();
         }
     }

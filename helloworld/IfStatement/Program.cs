@@ -4,7 +4,20 @@ namespace DecisionMaking
 {
     public class MainClass
     {
+        public int GetMax(int a, int b)
+        {
+            int c = 0;
 
+            if (a > b)
+                c = a;
+
+            else
+            {
+                c = b;
+            }
+
+            return c;
+        }
     }
     class Program
     {
@@ -13,6 +26,9 @@ namespace DecisionMaking
             /* local variable definition */
             int a = 10;
 
+            MainClass _MainClass = new MainClass();
+            var result = _MainClass.GetMax(20, 10);
+            Console.WriteLine(result + " is a large number");
             /* check the boolean condition using if statement */
             if (a < 20)
             {
