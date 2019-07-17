@@ -70,6 +70,17 @@ namespace Arrays
             new int[]{2,4},new int[]{ 3, 6 }, new int[]{ 4, 8 } };
             int i, j;
 
+
+            int[][] ab = new int[][] {
+                new int[]{1,2,3,4,5 },
+                 new int[]{1,2,3,4},
+                  new int[]{1,2,3,4},
+                   new int[]{1,2,3 }
+
+
+            };
+
+
             /* output each array element's value */
             for (i = 0; i < 5; i++)
             {
@@ -122,9 +133,14 @@ namespace Arrays
         public static void ArrayProps()
         {
             int[] list = { 34, 72, 13, 44, 25, 30, 10 };
-            int[] temp = list;
-            Console.Write("Original Array: ");
 
+            int[] temp = list;
+            var result  = Array.IndexOf(list, 44);
+            list.SetValue(55, result);
+
+            Console.Write("Original Array: ");
+            var ascOrder = list.OrderBy(s => s);
+            var descOrcer = list.OrderByDescending(s => s);
             foreach (int i in list)
             {
                 Console.Write(i + " ");
@@ -157,7 +173,7 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            ArraysSample.AccessingArrayElements();
+            ArraysSample.ArrayProps();
         }
     }
 }
