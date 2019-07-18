@@ -6,6 +6,50 @@ using System.Threading.Tasks;
 
 namespace ExceptionHandling
 {
+    public class ExceptionTest
+    {
+        public void DoStep1()
+        {
+
+        }
+        public void DoStep2()
+        {
+            // Thre is some issue please try after some time.
+        }
+        public void DoStep3()
+        {
+            // Thre is some issue please try after some time.
+        }
+        public void DoStep4()
+        {
+
+        }
+
+        public void DoAllSteps()
+        {
+            DoStep1();
+            DoStep2();
+            DoStep3();
+            DoStep4();
+        }
+        public void EditPost()
+        {
+            DoStep1();
+            DoStep2();
+            DoStep3();
+        }
+        public void PostUpdates()
+        {
+            try
+            {
+                DoAllSteps();
+            }
+            catch (Exception ex)
+            {
+                // Thre is some issue please try after some time.
+            }
+        }
+    }
     class Program
     {
         public static void Test()
@@ -52,16 +96,28 @@ namespace ExceptionHandling
         }
         public static bool ConvertToInt(string input, ref int resultNumber)
         {
-            // resultNumber = 0;
+            // resultNumber = 0;ertgerwtgre
             try
             {
                 resultNumber += Convert.ToInt32(input);
                 return true;
             }
-            catch (Exception ex)
+            catch(TimeoutException ex)
+            {
+                return false;
+            }
+            catch (IndexOutOfRangeException ex)
             {
                 Console.WriteLine(ex.Message);
                 return false;
+            }
+            catch(FormatException ex)
+            {
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
         static void Main(string[] args)

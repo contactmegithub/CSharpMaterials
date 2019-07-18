@@ -4,10 +4,24 @@ namespace RectangleApplication
 {
     class Rectangle
     {
-
-        // member variables
         double length;
         double width;
+        public Rectangle()
+        {
+
+        }
+        public Rectangle(double len, double wid)
+        {
+            length = len;
+            width = wid;
+        }
+
+        ~Rectangle()
+        {
+
+        }
+        // member variables
+
 
         public void Acceptdetails()
         {
@@ -30,6 +44,9 @@ namespace RectangleApplication
         static void Main(string[] args)
         {
             Rectangle r = new Rectangle();
+            r.GetArea();
+
+
             r.Acceptdetails();
             r.Display();
             Console.ReadLine();
