@@ -116,5 +116,22 @@ namespace SimpleCalculator
                 MessageBox.Show(CalculatorService.ErrorMessage);
             CalculatorService.ErrorMessage = string.Empty;
         }
+
+        private void btnequal_KeyDown(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show("Enter");
+        }
+
+        private void btnequal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MessageBox.Show("Mouse Click down");
+
+        }
+
+        private void btnequal_KeyUp(object sender, KeyEventArgs e)
+        {
+            MessageBox.Show("Mouse Click up");
+
+        }
     }
 }

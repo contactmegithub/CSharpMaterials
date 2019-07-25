@@ -29,7 +29,7 @@ namespace Loops
         public static void ForSample1()
         {
 
-            /* for loop execution */
+            /* for loop execution new changes*/
 
 
             for (int a = 10; a < 20; a = a + 1)

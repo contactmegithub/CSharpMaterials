@@ -123,7 +123,6 @@ namespace ExceptionHandling
         static void Main(string[] args)
         {
             int i = 5;
-
             while (i <= 5)
             {
                 int firstNumber = 10, secondNumber = 20;

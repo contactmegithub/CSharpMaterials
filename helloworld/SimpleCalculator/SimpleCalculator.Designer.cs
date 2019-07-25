@@ -133,6 +133,9 @@
             this.btnequal.Text = "=";
             this.btnequal.UseVisualStyleBackColor = true;
             this.btnequal.Click += new System.EventHandler(this.btnequal_Click);
+            this.btnequal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnequal_KeyDown);
+            this.btnequal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnequal_KeyPress);
+            this.btnequal.KeyUp += new System.Windows.Forms.KeyEventHandler(this.btnequal_KeyUp);
             // 
             // btnplus
             // 
