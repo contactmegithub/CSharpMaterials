@@ -55,6 +55,13 @@
     <Compile Include="SimpleCalculator.Designer.cs">
       <DependentUpon>SimpleCalculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="SMSService.cs" />
+    <Compile Include="StudentManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentManagment.Designer.cs">
+      <DependentUpon>StudentManagment.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +73,9 @@
     </Compile>
     <EmbeddedResource Include="SimpleCalculator.resx">
       <DependentUpon>SimpleCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentManagment.resx">
+      <DependentUpon>StudentManagment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
