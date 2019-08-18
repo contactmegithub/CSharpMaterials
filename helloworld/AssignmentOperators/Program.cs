@@ -8,17 +8,22 @@ namespace OperatorsAppl
 
         static void Main(string[] args)
         {
+            int x, y;
+            x = 6;
             int a = 21;
             int c;
             c = a;
+            y = x;
             Console.WriteLine("Line 1 - =  Value of c = {0}", c);
+            y = y + x;
 
+            c = c + a;
             c += a;
             Console.WriteLine("Line 2 - += Value of c = {0}", c);
-
+            y = y - x;
             c -= a;
             Console.WriteLine("Line 3 - -=  Value of c = {0}", c);
-
+            y = y * x;
             c *= a;
             Console.WriteLine("Line 4 - *=  Value of c = {0}", c);
 

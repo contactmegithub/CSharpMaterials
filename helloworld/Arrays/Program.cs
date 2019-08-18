@@ -8,8 +8,27 @@ namespace Arrays
 {
     class ArraysSample
     {
+        public static void PrintArray(int[] numbers)
+        {
+            try
+            {
+                Array.Sort(numbers);
+                for (int i = 0; i < numbers.LongLength; i++)
+                {
+                    //Console.WriteLine("Element[{0}] = {1}", i, numbers[i]);
+                    Console.WriteLine(numbers[i]);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
         public static void AccessingArrayElements()
         {
+            int[] intArrya = new int[] { 2, 8, 9, 4, 6 };
+
             int[] n = new int[10]; /* n is an array of 10 integers */
             int i, j;
 
@@ -22,7 +41,8 @@ namespace Arrays
             /* output each array element's value */
             for (j = 0; j < 10; j++)
             {
-                Console.WriteLine("Element[{0}] = {1}", j, n[j]);
+                Console.WriteLine("Element[{0}] = {1} {2}", j, n[j], j + 1);
+
             }
             Console.ReadKey();
         }
@@ -48,7 +68,12 @@ namespace Arrays
         public static void MultiDimentionalArray()
         {
             /* an array with 5 rows and 2 columns*/
-            int[,] a = new int[5, 2] { { 0, 0 }, { 1, 2 }, { 2, 4 }, { 3, 6 }, { 4, 8 } };
+            int[,] a = new int[5, 2] { { 0, 0 },
+                                       { 1, 2 },
+                                       { 2, 4 },
+                                       { 3, 6 },
+                                       { 4, 8 }
+                                        };
             int i, j;
 
             /* output each array element's value */
@@ -135,7 +160,7 @@ namespace Arrays
             int[] list = { 34, 72, 13, 44, 25, 30, 10 };
 
             int[] temp = list;
-            var result  = Array.IndexOf(list, 44);
+            var result = Array.IndexOf(list, 44);
             list.SetValue(55, result);
 
             Console.Write("Original Array: ");
@@ -173,7 +198,8 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            ArraysSample.ArrayProps();
+            int[] arryaNumbers = new int[] { 8749,98,8,7,41,9,4784,9849,844984,94984,984,4194,984,9,4};
+            ArraysSample.PrintArray(arryaNumbers);
         }
     }
 }

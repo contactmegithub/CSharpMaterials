@@ -8,10 +8,27 @@ namespace OperatorsAppl
         {
             bool a = true;
             bool b = true;
-            int one = 1;
-            int two = 2;
-            int three = 3;
+            int x = 2;
+            int y = 2;
+            int z = 3;
 
+            string LastName = string.Empty;
+            string Initial = string.Empty;
+
+            if (!(LastName == string.Empty))
+            {
+                ///store the record
+            }
+            else
+            {
+                LastName = Initial;
+                ///store the record
+            }
+
+            if (x == 1 & y == 2)
+            {
+
+            }
 
             if (a && b)
             {

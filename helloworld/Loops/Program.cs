@@ -31,10 +31,19 @@ namespace Loops
 
             /* for loop execution new changes*/
 
-
+           
             for (int a = 10; a < 20; a = a + 1)
             {
                 Console.WriteLine("value of a: {0}", a);
+            }
+            Console.Clear();
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.Write("Print");
+                }
+                Console.WriteLine("------------");
             }
             Console.ReadLine();
         }
@@ -44,7 +53,7 @@ namespace Loops
         public static void DowhileSample1()
         {
             /* local variable definition */
-            int a = 1000000;
+            int a = 10;
 
             /* do loop execution */
             do
@@ -86,7 +95,7 @@ namespace Loops
             {
                 Console.WriteLine("value of a: {0}", a);
                 a++;
-                
+
                 if (a > 15)
                 {
                     /* terminate the loop using break statement */
@@ -123,6 +132,7 @@ namespace Loops
         }
         public static void Main(string[] args)
         {
+            //ForSample1();
 
             for (int i = 0; i < 10; i++)
             {

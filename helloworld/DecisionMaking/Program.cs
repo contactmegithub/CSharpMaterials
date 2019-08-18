@@ -12,8 +12,14 @@ namespace DecisionMaking
         {
             /* local variable definition */
             int a = 10;
-
+            if (false)
+            {
+            }
             /* check the boolean condition using if statement */
+            if (a < 20)
+                Console.WriteLine("a is less than 20");
+            Console.WriteLine("a is less than 20");
+
             if (a < 20)
             {
                 /* if condition is true then print the following */
@@ -41,6 +47,25 @@ namespace DecisionMaking
             Console.WriteLine("value of a is : {0}", a);
             Console.ReadLine();
         }
+        public static void EelseifSample()
+        {
+            int a = 90;
+
+            if (a > 100)
+                Console.WriteLine("a greater than 100");
+            else if (a > 90)
+                Console.WriteLine("a greater than 90");
+            else if(a > 80)
+                Console.WriteLine("a greater than 80");
+            else if(a > 70)
+                Console.WriteLine("a greater than 70");
+            else if(a > 60)
+                Console.WriteLine("a greater than 60");
+            else if(a > 50)
+                Console.WriteLine("a greater than 50");
+            else
+                Console.WriteLine("a lesthan or equal to 50");
+        }
         public static void nestedIfStatment()
         {
             //* local variable definition */
@@ -65,7 +90,7 @@ namespace DecisionMaking
         public static void switchStatment()
         {
             /* local variable definition */
-            char grade = 'F';
+            char grade = 'B';
 
             switch (grade)
             {
@@ -103,11 +128,11 @@ namespace DecisionMaking
                 case 'D':
                     return "You passed";
                 case 'F':
-                    return  "Better try again";
+                    return "Better try again";
                 default:
                     return "Invalid grade";
             }
-        
+
         }
         public static void nestedSwitch()
         {
@@ -141,7 +166,7 @@ namespace DecisionMaking
         }
         public static void PrintWelcomeText(string FirstName, string LastName, Gender gender)
         {
-            switch(gender)
+            switch (gender)
             {
                 case Gender.Female:
                     Console.WriteLine("Welcome Mis." + FirstName + " " + LastName);
@@ -162,6 +187,7 @@ namespace DecisionMaking
         }
         public static void Main(string[] args)
         {
+            switchStatment();
             PrintWelcomeText("Abinaya", "Ganesan", Gender.Female);
             PrintWelcomeText("Mohammed", "Yasin", Gender.Male);
             PrintWelcomeText("Pavithra", "Selvaraj", Gender.Trans);

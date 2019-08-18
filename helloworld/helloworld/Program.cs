@@ -8,32 +8,36 @@ namespace helloworld
 {
     public class Program
     {
-        public static void PrintStar(int number)
+        void PrintMessage(string Message)
         {
-            for (int i = 0; i < number; i++)
-            {
-                Console.Write("*");
-            }
-            Console.WriteLine();
+            Console.WriteLine(Message);
         }
 
-        public static void PrintStarLines(int number)
+        int CalculateAge(DateTime DOB)
         {
-            for (int i = 0; i < number; i++)
-            {
-                Program.PrintStar(number - i);
-            }
+            var result = (int)DateTime.Now.Subtract(DOB).TotalDays / 365;
+            return result;
         }
+
+        public void CalculateMyAgeAndPrint()
+        {
+            Console.WriteLine("Please enter you date of birth in the below format \n ddMMyyyy");
+            var result = Console.ReadLine();
+            DateTime DateOfBirth = DateTime.ParseExact(result, "ddMMyyyy", null);
+
+            int Age = CalculateAge(DateOfBirth);
+
+            string OutputMessage = $"Your Age is {Age}";
+
+            PrintMessage(OutputMessage);
+
+        }
+
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number");
-            var result = Console.ReadLine();
-            int number = Convert.ToInt32(result);
+            Program dotNetDemo = new Program();
 
-            Program.PrintStarLines(number);
-
-
-            Console.ReadLine();
+            dotNetDemo.CalculateMyAgeAndPrint();
         }
     }
 }
