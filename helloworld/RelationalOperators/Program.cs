@@ -7,11 +7,12 @@ class Program
         int a = 21;
         int b = 10;
 
+
         if (a == b)
         {
             Console.WriteLine("Line 1 - a is equal to b");
         }
-        else
+        if (a != b)
         {
             Console.WriteLine("Line 1 - a is not equal to b");
         }

@@ -38,11 +38,19 @@ namespace ExceptionHandling
             DoStep2();
             DoStep3();
         }
+        public void test(string gender)
+        {
+            if(!gender.Equals("Male")|| !gender.Equals("Female"))
+            {
+                throw new ArgumentException("Gender not matched with valid data");
+            }
+        }
         public void PostUpdates()
         {
             try
             {
                 DoAllSteps();
+
             }
             catch (Exception ex)
             {
@@ -52,6 +60,32 @@ namespace ExceptionHandling
     }
     class Program
     {
+        public static void ExceptionTest()
+        {
+
+            try
+            {
+                Console.WriteLine("Enter the first number");
+                var n1 = Console.ReadLine();
+                Console.WriteLine("Enter the second number");
+                var n2 = Console.ReadLine();
+
+                var n3 = Convert.ToInt32(n1);
+                var n4 = Convert.ToInt32(n2);
+                var n5 = n3 + n4;
+                Console.WriteLine("The final result is : " + n5);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+
+            }
+
+
+        }
         public static void Test()
         {
             try
@@ -62,7 +96,7 @@ namespace ExceptionHandling
             }
             catch (Exception ex)
             {
-          //
+                //
             }
             finally
             {
@@ -74,7 +108,7 @@ namespace ExceptionHandling
             try
             {
                 Test();
-                   var reslut = a / b;
+                var reslut = a / b;
                 return reslut;
             }
             catch (FormatException ex)
@@ -92,7 +126,11 @@ namespace ExceptionHandling
                 Console.WriteLine(ex.Message);
                 return 0;
             }
-           
+            finally
+            {
+
+            }
+
         }
         public static bool ConvertToInt(string input, ref int resultNumber)
         {
@@ -102,7 +140,7 @@ namespace ExceptionHandling
                 resultNumber += Convert.ToInt32(input);
                 return true;
             }
-            catch(TimeoutException ex)
+            catch (TimeoutException ex)
             {
                 return false;
             }
@@ -111,7 +149,7 @@ namespace ExceptionHandling
                 Console.WriteLine(ex.Message);
                 return false;
             }
-            catch(FormatException ex)
+            catch (FormatException ex)
             {
                 return false;
             }
@@ -122,6 +160,20 @@ namespace ExceptionHandling
         }
         static void Main(string[] args)
         {
+            Program.ExceptionTest();
+
+
+
+
+
+
+
+
+
+
+            ExceptionTest _ExceptionTest = new ExceptionTest();
+            _ExceptionTest.test("dgdfgdf");
+
             int i = 5;
             while (i <= 5)
             {

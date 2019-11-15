@@ -23,11 +23,28 @@ namespace IfElseStatment
             int a = 100;
             int b = 100;
 
+            string result3 = a > 100 ? "Yes it is greaterthan 100" : "No it is not greaterthan 100";
             int Age = 50;
             int salary = 2000;
             if (!false)
             {
-                string result3 = a > 100 ? "Yes it is greaterthan 100" : "No it is not greaterthan 100";
+               // string result3 = a > 100 ? "Yes it is greaterthan 100" : "No it is not greaterthan 100";
+            }
+            //Age < 60   = ture
+            
+            
+            //salary >= 2000 == true
+            // b > a == false
+            //              True
+            if(Age < 60)
+            {
+                if(salary >= 2000 || b > a)
+                {
+                    if(true)
+                    {
+
+                    }
+                }
             }
 
             if (Age < 60 && (salary >= 2000 || b > a))

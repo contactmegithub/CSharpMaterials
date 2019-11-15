@@ -7,6 +7,142 @@ using System.Threading.Tasks;
 namespace InterfaceSample
 {
 
+    public abstract class MyFirstAbstraceClass
+    {
+        public int GetFullTimeEmployeeSalary(int hour)
+        {
+            int salary = hour * 1000;
+            return salary;
+        }
+        public abstract int GetPartTimeSalary(int hours);
+        public abstract int GetContractTimeSalary(int hours);
+    }
+
+    public class EmployeeManagment : MyFirstAbstraceClass
+    {
+        public override int GetContractTimeSalary(int hours)
+        {
+            int salary = base.GetFullTimeEmployeeSalary(hours) + 50;
+            return salary;
+        }
+
+        public override int GetPartTimeSalary(int hours)
+        {
+            int salary = hours * 600;
+            return salary;
+        }
+    }
+
+
+
+
+
+
+
+    public interface InterfaceSample
+    {
+        void doStep1();
+        void doStep2();
+        void doStep3();
+        void doStep4();
+        void doStep5();
+        void doStep6();
+    }
+
+
+    public class InterfaceClass : InterfaceSample
+    {
+        public void doStep1()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep2()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep3()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep4()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep5()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep6()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+
+
+    public class Automobile
+    {
+        protected void GetEngine()
+        {
+
+        }
+        protected void GetWheel()
+        {
+
+        }
+        protected void Assembly()
+        {
+
+        }
+        public void GetRicshaw()
+        {
+            GetEngine();
+            GetEngine();
+            Assembly();
+        }
+    }
+    public class Car : Automobile
+    {
+       
+        public void GetCar()
+        {
+            GetEngine();
+            GetEngine();
+            Assembly();
+        }
+    }
+    public class Client
+    {
+        public void DispatchVechicle()
+        {
+            Automobile automobile = new Automobile();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public interface IFirstInterface
     {
         int Add(int a, int b);
@@ -93,7 +229,7 @@ namespace InterfaceSample
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             IFirstInterface _IFirstInterface = new AdditionService();
 

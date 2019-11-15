@@ -7,6 +7,47 @@ using System.Threading.Tasks;
 
 namespace AccessModifiers
 {
+    public class Payment
+    {
+        public void MakePayment()
+        {
+
+        }
+    }
+
+
+    public class Electronics: Payment
+    {
+        public void Sell()
+        {
+            MakePayment();
+        }
+    }
+    public class Vegitables: Payment
+    {
+        public void Sell()
+        {
+            MakePayment();
+        }
+    }
+    public class Cloths: Payment
+    {
+        public void Sell()
+        {
+            MakePayment();
+        }
+    }
+    public class Wood: Payment
+    {
+        public void Sell()
+        {
+            MakePayment();
+        }
+    }
+
+
+
+
     public class User
     {
         public string FirstName { get; set; }
@@ -74,6 +115,56 @@ namespace AccessModifiers
        
 
     }
+
+
+    public class Exce005
+    {
+        public void AreaOfCircle(float r)
+        {
+            float a = (float)3.14 * r;
+            // here we have used funtion overload with 1 parameter.  
+            Console.WriteLine("Area of a circle: {0}", a);
+        }
+        public void AreaOfSquare(float l, float b)
+        {
+            float x = (float)l * b;
+            // here we have used funtion overload with 2 parameters.  
+            Console.WriteLine("Area of a rectangle: {0}", x);
+        }
+        public void AreaTriangle(float a, float b, float c)
+        {
+            float s = (float)(a * b * c) / 2;
+            // here we have used funtion overload with 3 parameters.  
+            Console.WriteLine("Area of a circle: {0}", s);
+        }
+    }
+
+    public class client
+    {
+        public void doSomeOperation()
+        {
+            Exce005 exce005 = new Exce005();
+
+            exce005.AreaOfSquare(0, 0);
+
+
+            Polymorphism polymorphism = new Polymorphism();
+            polymorphism.Area(0, 0, 0);
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     public class Polymorphism
     {

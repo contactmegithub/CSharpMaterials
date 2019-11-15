@@ -9,6 +9,53 @@ namespace Loops
     public class Program
     {
 
+
+
+
+
+
+        public static void Sample()
+        {
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    if (j % 2 == 0)
+                        break;
+                    Console.WriteLine("Value of i = {0} and Value of j = {1}", i, j);
+                }
+            }
+
+
+            string[] fruits = new string[] { "banana", "Apple", "Tree", "Grapes", "Orange", "Leaves", "Lime" };
+
+            foreach (var item in fruits)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
         #region While samples
         public static void WSample1()
         {
@@ -31,7 +78,7 @@ namespace Loops
 
             /* for loop execution new changes*/
 
-           
+
             for (int a = 10; a < 20; a = a + 1)
             {
                 Console.WriteLine("value of a: {0}", a);
@@ -132,23 +179,17 @@ namespace Loops
         }
         public static void Main(string[] args)
         {
+            Program.Sample();
             //ForSample1();
+            string[] fruits = new string[] { "banana", "Apple", "Tree", "Grapes", "Orange", "Leaves", "Lime" };
 
-            for (int i = 0; i < 10; i++)
+            foreach (var item in fruits)
             {
-                if (i % 2 == 0)
+                if (item.Equals("Tree"))
+                    break;
+                else if (item.Equals("Leaves"))
                     continue;
-                Console.WriteLine($"{i}");
-            }
-
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 10; j++)
-                {
-                    if (i == j)
-                        continue;
-                    Console.WriteLine($"{i},{j}");
-                }
+                Console.WriteLine(item);
             }
 
         }

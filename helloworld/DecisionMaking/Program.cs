@@ -30,6 +30,10 @@ namespace DecisionMaking
         }
         public static void ifelseSample()
         {
+
+            int v1 = 20;
+
+            var result = v1 == 10 ? "Yes it is equal to 10" : "No it is not equal to 10";
             /* local variable definition */
             int a = 100;
 
@@ -49,19 +53,19 @@ namespace DecisionMaking
         }
         public static void EelseifSample()
         {
-            int a = 90;
+            int a = 40;
 
             if (a > 100)
                 Console.WriteLine("a greater than 100");
             else if (a > 90)
                 Console.WriteLine("a greater than 90");
-            else if(a > 80)
+            else if (a > 80)
                 Console.WriteLine("a greater than 80");
-            else if(a > 70)
+            else if (a > 70)
                 Console.WriteLine("a greater than 70");
-            else if(a > 60)
+            else if (a > 60)
                 Console.WriteLine("a greater than 60");
-            else if(a > 50)
+            else if (a > 50)
                 Console.WriteLine("a greater than 50");
             else
                 Console.WriteLine("a lesthan or equal to 50");
@@ -71,7 +75,10 @@ namespace DecisionMaking
             //* local variable definition */
             int a = 100;
             int b = 200;
+            if (a == b && b == 200)
+            {
 
+            }
             /* check the boolean condition */
             if (a == 100)
             {
@@ -90,7 +97,7 @@ namespace DecisionMaking
         public static void switchStatment()
         {
             /* local variable definition */
-            char grade = 'B';
+            char grade = 'X';
 
             switch (grade)
             {
@@ -114,10 +121,36 @@ namespace DecisionMaking
             Console.WriteLine("Your grade is  {0}", grade);
             Console.ReadLine();
         }
+
+        public static int switchStatmentNumber(int percentage, int TotalCost)
+        {
+            var finalPrice = 0;
+            switch (percentage)
+            {
+                case 10:
+                    finalPrice = TotalCost - (TotalCost / 100 * 10);
+                    break;
+                case 20:
+                    finalPrice = TotalCost - (TotalCost / 100 * 20);
+                    break;
+                case 30:
+                    finalPrice = TotalCost - (TotalCost / 100 * 30);
+                    break;
+                case 40:
+                    finalPrice = TotalCost - (TotalCost / 100 * 40);
+                    break;
+                default:
+                    finalPrice = TotalCost - (TotalCost / 100 * 50);
+                    break;
+
+            }
+            return finalPrice;
+           
+        }
+
         public static string switchStatment(char grade)
         {
             /* local variable definition */
-
             switch (grade)
             {
                 case 'A':
@@ -143,13 +176,16 @@ namespace DecisionMaking
             {
                 case 100:
                     Console.WriteLine("This is part of outer switch ");
-
                     switch (b)
                     {
                         case 200:
                             Console.WriteLine("This is part of inner switch ");
                             break;
                     }
+
+                    //
+                    //
+
                     break;
             }
             Console.WriteLine("Exact value of a is : {0}", a);
@@ -187,7 +223,13 @@ namespace DecisionMaking
         }
         public static void Main(string[] args)
         {
-            switchStatment();
+            //var result = switchStatmentNumber(100, 100);
+            %var result2  = switchStatment('B');
+            int a = 100;
+            var output = "";
+            output = a > 200 ? "greater than 200" : "lesthan than 200";
+
+            nestedSwitch();
             PrintWelcomeText("Abinaya", "Ganesan", Gender.Female);
             PrintWelcomeText("Mohammed", "Yasin", Gender.Male);
             PrintWelcomeText("Pavithra", "Selvaraj", Gender.Trans);

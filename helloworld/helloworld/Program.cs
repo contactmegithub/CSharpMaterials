@@ -19,7 +19,7 @@ namespace helloworld
             return result;
         }
 
-        public void CalculateMyAgeAndPrint()
+        internal void CalculateMyAgeAndPrint()
         {
             Console.WriteLine("Please enter you date of birth in the below format \n ddMMyyyy");
             var result = Console.ReadLine();

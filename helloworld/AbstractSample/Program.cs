@@ -49,9 +49,12 @@ namespace AbstractSample
 
         public string EmployeeAddress { get; set; }
 
+        public void GetEmployeeDetails(int id)
+        {
+            // returns employee details
+        }
+
         public abstract double CalculateSalary(int hoursWorked);
-
-
 
     }
 

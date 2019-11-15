@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace ValueTypeSample
 {
+    public class SMS
+    {
+        public void NewStudent(string Name, string Contact, string Age, string Address, Gender Gender)
+        {
+            if(Gender== Gender.Male)
+            {
+                //Apply discount 10%
+            }
+            if (Gender == Gender.Female)
+            {
+                //Apply discount 20%
+            }
+        }
+        public void StoreNewBook(Book book)
+        {
 
+        }
+    }
     public class TypeConversion
     {
         public void Converter()
@@ -91,6 +108,21 @@ namespace ValueTypeSample
         {
             // Logic that add book to library
         }
+        public void GetDiscountV2(int Age, string Gender)
+        {
+            if (Gender.Equals("Male"))
+            {
+                //Apply 10% discount
+            }
+            if (Gender.Equals("Female"))
+            {
+                //Apply 30% discount
+            }
+            if (Gender.Equals("Trans"))
+            {
+                //Apply 70% discount
+            }
+        }
 
         public void GetDiscount(int Age, Gender Gender)
         {
@@ -109,12 +141,34 @@ namespace ValueTypeSample
         }
         public static void Main(string[] args)
         {
+            Program prg = new Program();
+            prg.GetDiscount(30, 0);
 
-            VvsRDifferences _VvsRDifferences = new VvsRDifferences();
-            _VvsRDifferences.testMethod();
 
 
-            int test1 = 0;
+            SMS _SMS = new SMS();
+            Book bk = new Book
+            {
+                Authour = "Teate",
+                Language = "English",
+                Name = "Tutors",
+                Pages = "100",
+                PublisherName = "Chennai",
+                Title = "CSharp",
+                Year = "2020"
+            
+            };
+            _SMS.StoreNewBook(bk);
+
+
+
+            _SMS.NewStudent("Dheepan", "123456", "590", "Address",Gender.Male);
+            //VvsRDifferences _VvsRDifferences = new VvsRDifferences();
+            //_VvsRDifferences.testMethod();
+            Console.WriteLine("Enter your age");
+            string input = Console.ReadLine();
+
+            int test1 = Convert.ToInt32(input);
             double test2 = 0;
             float test3 = 0;
             long test4 = 0;

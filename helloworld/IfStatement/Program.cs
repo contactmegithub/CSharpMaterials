@@ -6,15 +6,59 @@ namespace DecisionMaking
     {
         public int GetMax(int a, int b)
         {
+            int a1 = 10;
+            int b1 = 0;
+            int c1 = 10;
+
+            if (true)
+            {
+
+            }
+            else
+            {
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+            if (true)
+                Console.WriteLine("Say something");
+            Console.WriteLine("Say something");
+
+
+
+            if (false)
+            {
+                Console.WriteLine("Say something");
+            }
+
+            if (a1 == c1)
+            {
+                Console.WriteLine("a1 equals c1");
+            }
+            else
+            {
+                Console.WriteLine("a1 not equals c1");
+            }
+            Console.WriteLine("a1 equals c1");
             int c = 0;
 
             if (a > b)
                 c = a;
+            a = c;
 
-            else
-            {
-                c = b;
-            }
+            //else
+            //{
+            //    c = b;
+            //}
 
             return c;
         }
@@ -23,20 +67,33 @@ namespace DecisionMaking
     {
         static void Main(string[] args)
         {
-            /* local variable definition */
-            int a = 10;
+            Console.WriteLine("Enter the age");
+            var age = Convert.ToInt32(Console.ReadLine());
 
-            MainClass _MainClass = new MainClass();
-            var result = _MainClass.GetMax(20, 10);
-            Console.WriteLine(result + " is a large number");
-            /* check the boolean condition using if statement */
-            if (a < 20)
+            if (age < 18)
             {
-                /* if condition is true then print the following */
-                Console.WriteLine("a is less than 20");
+                Console.WriteLine("I am minor");
             }
-            Console.WriteLine("value of a is : {0}", a);
-            Console.ReadLine();
+            else if (age >= 18 && age < 22)
+            {
+                Console.WriteLine("Some thing ");
+            }
+            else if(age >= 22 && age < 30)
+            {
+                Console.WriteLine("Some thing ");
+            }
+            else if(age >= 30 && age < 40)
+            {
+                Console.WriteLine("Some thing ");
+            }
+            else if(age >= 40 && age < 50)
+            {
+                Console.WriteLine("Some thing ");
+            }
+            else
+            {
+                Console.WriteLine("I am a Senor Person");
+            }
         }
     }
 }

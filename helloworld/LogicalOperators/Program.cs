@@ -11,7 +11,35 @@ namespace OperatorsAppl
             int x = 2;
             int y = 2;
             int z = 3;
+            int Number1 = 10;
+            int Number2 = 10;
+            int Number3 = 10;
+            int Number4 = 10;
 
+            if (!(Number1 == Number2 || Number3 == Number4))
+            {
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (!(Number1 == Number2))
+            {
+                Console.WriteLine("All are matched with any of three");
+            }
+
+            int result = 50;
             string LastName = string.Empty;
             string Initial = string.Empty;
 
@@ -25,7 +53,7 @@ namespace OperatorsAppl
                 ///store the record
             }
 
-            if (x == 1 & y == 2)
+            if (!(x == y && x + y == 30))
             {
 
             }

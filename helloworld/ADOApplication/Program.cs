@@ -44,6 +44,8 @@ namespace ADOApplication
                     DataSet ds = new DataSet();
 
                     sde.Fill(ds);
+                    var result = ds.GetXml();
+                    var res = ds.GetXmlSchema();
 
                     //GridView1.DataSource = ds;
 

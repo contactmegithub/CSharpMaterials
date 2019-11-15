@@ -157,6 +157,9 @@ namespace Arrays
 
         public static void ArrayProps()
         {
+            int[] arrayOfAge = new int[10];
+
+
             int[] list = { 34, 72, 13, 44, 25, 30, 10 };
 
             int[] temp = list;
@@ -196,9 +199,66 @@ namespace Arrays
     }
     class Program
     {
+        public readonly int[] redArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+
         static void Main(string[] args)
         {
-            int[] arryaNumbers = new int[] { 8749,98,8,7,41,9,4784,9849,844984,94984,984,4194,984,9,4};
+
+            ArraySample _ArraySample = new ArraySample();
+            _ArraySample.Route();
+
+
+            int[] arryaNumbers2 = new int[] { 8749, 98, 8, 7, 41, 9, 4784, 9849, 844984, 94984, 984, 4194, 984, 9, 4 };
+
+
+
+            Array.Sort(arryaNumbers2);
+
+            Array.Reverse(arryaNumbers2);
+
+
+
+
+
+
+            int[] arrayFixedSize = new int[10];
+
+            int[] sampleArray = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            int[,] multiDimentional = new int[,] {
+                { 1,2,3},
+                { 4,5,6},
+                {7,8,9 }
+            };
+            var put = Array.IndexOf(sampleArray, 4);
+            sampleArray.SetValue(50, put);
+            Array.Reverse(sampleArray);
+            int[][] jaggedArray = new int[][] {
+                new int[]{ 1,2,3},
+                new int[]{ 4,5,6},
+                new int[]{ 1,2,3},
+                new int[]{ 1,2,3},
+            };
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine(multiDimentional[i, j]);
+                }
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                sampleArray[i] = i + 100;
+            }
+            ArraysSample.ArrayProps();
+            int number = 0;
+            int[] numArray = new int[] { 10, 20 };
+
+            int[,] multiDimention = new int[,] { { 1, 2 }, { 3, 4 }, { 3, 4 } };
+            var result = multiDimention[1, 1];
+
+
+            int[] arryaNumbers = new int[] { 8749, 98, 8, 7, 41, 9, 4784, 9849, 844984, 94984, 984, 4194, 984, 9, 4 };
             ArraysSample.PrintArray(arryaNumbers);
         }
     }
