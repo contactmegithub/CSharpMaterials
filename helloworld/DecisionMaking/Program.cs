@@ -224,7 +224,7 @@ namespace DecisionMaking
         public static void Main(string[] args)
         {
             //var result = switchStatmentNumber(100, 100);
-            %var result2  = switchStatment('B');
+            //var result2  = switchStatment('B');
             int a = 100;
             var output = "";
             output = a > 200 ? "greater than 200" : "lesthan than 200";

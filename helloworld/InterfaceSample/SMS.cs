@@ -76,6 +76,9 @@ namespace InterfaceSample
         }
         static void Main(string[] args)
         {
+            InterfaceSample2.Client client = new InterfaceSample2.Client();
+            client.DoSomething();
+            return;
             IDBManager dBManager = new CosmosDB();
             StudentManagment studentManagment = new StudentManagment(dBManager);
             studentManagment.SaveStudent();

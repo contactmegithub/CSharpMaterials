@@ -14,13 +14,15 @@ namespace ADOApplication
 
         public void DataAdapterSample()
         {
+            string gender = "Male' or 1 = 1 or ''='";
+            //string gender = "Male";
             string connectionString =
-           "Data Source=(local);Initial Catalog=SQLTraining;"
-           + "Integrated Security=true";
+             @"Data Source=MOHAMMED\MSSQLSERVER01;Initial Catalog=Retail;"
+             + "Integrated Security=true";
 
             // Provide the query string with a parameter placeholder.
             string queryString =
-                "select * from Student;";
+                "select * from Customer";
 
             // Specify the parameter value.
             //int paramValue = 5;
@@ -31,6 +33,8 @@ namespace ADOApplication
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Create the Command and Parameter objects.
+                SqlCommand sqlCommand = new SqlCommand(queryString, connection);
+                //sqlCommand.Parameters.AddWithValue("@gender", gender);
                 //command.Parameters.AddWithValue("@pricePoint", paramValue);
 
                 // Open the connection in a try/catch block. 
@@ -39,7 +43,7 @@ namespace ADOApplication
                 try
                 {
                     connection.Open();
-                    SqlDataAdapter sde = new SqlDataAdapter("Select top 10 * from student", connection);
+                    SqlDataAdapter sde = new SqlDataAdapter(sqlCommand);
 
                     DataSet ds = new DataSet();
 
@@ -64,14 +68,15 @@ namespace ADOApplication
         {
             Program program = new Program();
             program.DataAdapterSample();
+
+            string gender = "Male";
             string connectionString =
-            "Data Source=(local);Initial Catalog=SQLTraining;"
+            @"Data Source=MOHAMMED\MSSQLSERVER01;Initial Catalog=Retail;"
             + "Integrated Security=true";
 
             // Provide the query string with a parameter placeholder.
             string queryString =
-                "select * from Student;";
-
+                "select * from Customer where gender = '" + gender + "'";
             // Specify the parameter value.
             //int paramValue = 5;
 
@@ -87,21 +92,25 @@ namespace ADOApplication
                 // Open the connection in a try/catch block. 
                 // Create and execute the DataReader, writing the result
                 // set to the console window.
+
+
                 try
                 {
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        Console.WriteLine("id:{0}\tfirst_name:{1}\tlast_name:{2}\temail{3}\tgender{4}\tstreet{5}\tCity{6}\tState{7}",
-                            reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6], reader[7]);
-                        Thread.Sleep(1000);
+                        Console.WriteLine("id:{0}\tfirst_name:{1}\tlast_name:{2}\temail{3}\tgender{4}\tcontact{5}",
+                            reader[0], reader[1], reader[2], reader[3], reader[4], reader[5]);
                     }
                     reader.Close();
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                }
+                finally
+                {
                 }
                 Console.ReadLine();
             }

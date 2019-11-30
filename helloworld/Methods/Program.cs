@@ -147,7 +147,7 @@ namespace Methods
             Car car = new Car();
             car.Deliver();
 
-            Customer customer = new PlatinumCustomer();
+            Customer customer = new SilverCustomer();
             var result = customer.getDiscount(1000);
         }
     }

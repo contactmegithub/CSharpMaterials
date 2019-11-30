@@ -8,6 +8,27 @@ using Subtraction;
 
 namespace Calculator
 {
+    public class DBMS
+    {
+        public void Select()
+        {
+
+        }
+        public void Insert()
+        {
+
+        }
+        public void Update()
+        {
+
+        }
+        public void Delete()
+        {
+
+        }
+    }
+
+
     public class ArithmeticOperations
     {
         public int Add(int a, int b)
@@ -31,11 +52,11 @@ namespace Calculator
 
     }
 
-    public class Client : Subraction
+    public class Client : DBMS
     {
         public void doSomeOperation()
         {
-            base.Subrtact(0, 0);
+         
         }
     }
 
@@ -47,8 +68,21 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Subraction _Subraction = new Subraction();
-            //_Subraction.Subrtact(0,0);
+            
+            Console.WriteLine("Enter the passage");
+            var input = Console.ReadLine();
+
+            var result = input.GroupBy(g => g).Select(val => new {
+                letter = val.Key,
+                count = val.Count()
+            });
+
+            foreach (var item in result)
+            {
+                Console.WriteLine("letter {0} repeats '{1}' times", item.letter, item.count);
+            }
+
+            Console.ReadLine();
         }
     }
 }

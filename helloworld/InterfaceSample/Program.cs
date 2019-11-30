@@ -33,9 +33,59 @@ namespace InterfaceSample
         }
     }
 
+    public interface CarBusiness
+    {
+        void ImplementWheel();
+        void ImplementBody();
+        void ImplementControls();
+        void ImplementTestDrive();
+        void ImplementDeliver();
+    }
 
 
 
+    public interface MyInterface
+    {
+        void doStep1();
+        void doStep2();
+        void doStep3();
+        void doStep4();
+        void doStep5();
+        void doStep6();
+    }
+
+    public class InterfaceImplementation : MyInterface
+    {
+        public void doStep1()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep2()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep3()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep4()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep5()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void doStep6()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 
 
@@ -122,6 +172,11 @@ namespace InterfaceSample
         public void DispatchVechicle()
         {
             Automobile automobile = new Automobile();
+
+
+            MyInterface myInterface = new InterfaceImplementation();
+            myInterface.doStep1();
+
         }
     }
 
@@ -231,6 +286,7 @@ namespace InterfaceSample
     {
         static void Main2(string[] args)
         {
+           
             IFirstInterface _IFirstInterface = new AdditionService();
 
             var result1 = _IFirstInterface.Add(1, 2);

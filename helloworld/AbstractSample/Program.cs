@@ -74,6 +74,7 @@ namespace AbstractSample
             return hoursWorked * 65.00;
         }
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -81,6 +82,11 @@ namespace AbstractSample
             DiselCar _DiselCar = new DiselCar();
             _DiselCar.CreateBody();
             _DiselCar.CreateEngine();
+
+
+            BaseEmployee _BaseEmployee = new FullTimeEmployee();
+            _BaseEmployee.GetEmployeeDetails(0);
+            _BaseEmployee.CalculateSalary(0);
         }
     }
 }

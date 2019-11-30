@@ -16,7 +16,7 @@ namespace ExceptionHandling
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             try
             {
@@ -36,7 +36,7 @@ namespace ExceptionHandling
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             try
             {
@@ -45,7 +45,7 @@ namespace ExceptionHandling
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
         public void M3()
@@ -56,17 +56,18 @@ namespace ExceptionHandling
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
         public void test(string gender)
         {
             if (!gender.Equals("Male") || !gender.Equals("Female"))
             {
+                //log into file "applicationLogs.txt"
                 throw new ArgumentException("Gender not matched with valid data");
             }
         }
-        static void Main2(string[] args)
+        static void Main(string[] args)
         {
             ThrowSample _ThrowSample = new ThrowSample();
             try

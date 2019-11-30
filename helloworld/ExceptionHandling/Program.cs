@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ExceptionHandling
 {
+
+   
     public class ExceptionTest
     {
         public void DoStep1()
@@ -62,6 +64,33 @@ namespace ExceptionHandling
     {
         public static void ExceptionTest()
         {
+
+            try
+            {
+
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                throw ex;
+            }
+            catch (FormatException ex)
+            {
+                throw ex;
+            }
+            catch (TimeoutException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+
+            }
+
+
 
             try
             {
@@ -158,7 +187,7 @@ namespace ExceptionHandling
                 throw ex;
             }
         }
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             Program.ExceptionTest();
 

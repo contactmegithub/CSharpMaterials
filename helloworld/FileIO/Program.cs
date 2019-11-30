@@ -5,17 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
 namespace FileIO
 {
     public class Program
     {
+ 
         static void Main(string[] args)
         {
-            var output = File.ReadAllText(@"C:\Users\Mohammed Yasin\Downloads\PDFtoText.txt");
+            var output = File.ReadAllLines(@"C:\Users\Mohammed Yasin\Downloads\PDFtoText.txt");
 
 
 
-            File.WriteAllText("D:\\ReadAllFiles\\testFIO.txt", "fsgstjsfkj smyujnsthnbtsynsydimduynjr");
+            File.AppendAllLines("D:\\ReadAllFiles\\testFIO.txt", output);
             int i = 0;
             while (i < 5)
             {

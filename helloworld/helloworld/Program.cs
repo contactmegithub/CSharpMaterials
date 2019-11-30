@@ -8,6 +8,25 @@ namespace helloworld
 {
     public class Program
     {
+        public int diagonalDifference(List<List<int>> arr2)
+        {
+            List<List<int>> arr = new List<List<int>>() { new List<int> {11,2,4 },
+            new List<int> {4,5,6 },
+            new List<int> { 10,8,-12}};
+            int result = 0;
+
+            for (int i = 0; i < arr.Count(); i++)
+            {
+                result += arr[i].ElementAt(i);
+            }
+            for (int i = 0; i < arr.Count(); i++)
+            {
+                result -= arr[i].ElementAt(arr[i].Count()-1-i);
+            }
+            if (result < 0)
+                result=result * -1;
+            return result;
+        }
         void PrintMessage(string Message)
         {
             Console.WriteLine(Message);
@@ -36,7 +55,7 @@ namespace helloworld
         public static void Main(string[] args)
         {
             Program dotNetDemo = new Program();
-
+            dotNetDemo.diagonalDifference(null);
             dotNetDemo.CalculateMyAgeAndPrint();
         }
     }
