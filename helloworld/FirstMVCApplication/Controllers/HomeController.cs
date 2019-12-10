@@ -23,8 +23,8 @@ namespace FirstMVCApplication.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
-            return View();
+            var output = View();
+            return output;
         }
     }
 }

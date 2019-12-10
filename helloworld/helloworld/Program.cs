@@ -8,6 +8,10 @@ namespace helloworld
 {
     public class Program
     {
+        public string ConcatName(string FristName, string LastName)
+        {
+            return $"{FristName} {LastName}";
+        }
         public int diagonalDifference(List<List<int>> arr2)
         {
             List<List<int>> arr = new List<List<int>>() { new List<int> {11,2,4 },
@@ -21,10 +25,10 @@ namespace helloworld
             }
             for (int i = 0; i < arr.Count(); i++)
             {
-                result -= arr[i].ElementAt(arr[i].Count()-1-i);
+                result -= arr[i].ElementAt(arr[i].Count() - 1 - i);
             }
             if (result < 0)
-                result=result * -1;
+                result = result * -1;
             return result;
         }
         void PrintMessage(string Message)

@@ -26,5 +26,6 @@ namespace FirstMVCApplication
         }
     
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Channel> Channels { get; set; }
     }
 }

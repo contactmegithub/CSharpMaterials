@@ -12,11 +12,17 @@ namespace FirstMVCApplication
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes();
             routes.MapRoute(
-                name: "c",
-                url: "c",
-                defaults: new { controller = "Customers", action = "Index", id = UrlParameter.Optional }
-            );
+               name: "EditCustomer",
+               url: "EditCustomer/{action}/{id}",
+               defaults: new { controller = "Customers", action = "Edit", id = UrlParameter.Optional }
+           );
+            routes.MapRoute(
+               name: "CreateCustomer",
+               url: "CreateCustomer/{action}/{id}",
+               defaults: new { controller = "Customers", action = "Create", id = UrlParameter.Optional }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
